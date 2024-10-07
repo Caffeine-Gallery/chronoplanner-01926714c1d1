@@ -1,0 +1,19 @@
+type Note = 
+ record {
+   content: text;
+   id: nat;
+   isComplete: bool;
+ };
+service : {
+  addNote: (text, text) -> (nat);
+  getIncompleteNoteCount: (text) -> (nat) query;
+  getNotes: (text) -> (vec Note) query;
+  getOnThisDay: (text) ->
+   (opt record {
+          title: text;
+          wikiLink: text;
+          year: int;
+        }) query;
+  setOnThisDay: (text, text, int, text) -> (bool);
+  toggleNoteComplete: (text, nat) -> (bool);
+}

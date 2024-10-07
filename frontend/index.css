@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#calendar {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day:hover {
+    background-color: #e0e0e0;
+}
+
+.calendar-day.past {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.calendar-day.selected {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.incomplete-count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 0.8em;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#day-detail {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.on-this-day {
+    margin-bottom: 20px;
+}
+
+.notes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.notes li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.notes li span.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.add-note {
+    display: flex;
+    margin-top: 10px;
+}
+
+.add-note input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a7bc8;
+}
